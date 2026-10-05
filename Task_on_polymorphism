@@ -1,0 +1,212 @@
+# 1. Single Inheritance
+# Example 1
+
+class Game:
+    def play(self):
+        print("play: some game")
+
+class Cricket(Game):
+    def play(self):
+        print("play: 11 players with bat and ball")
+
+g = Game()
+g.play()
+c = Cricket()
+c.play()
+
+# Example 2
+
+class Tv:
+    def watch(self):
+        print("watch: cable channels")
+
+class SmartTv(Tv):
+    def watch(self):
+        print("watch: Netflix and YouTube")
+
+t = Tv()
+t.watch()
+st = SmartTv()
+st.watch()
+
+# 2. Multilevel Inheritance
+# Example 3
+
+class Vehicle:
+    def fuel(self):
+        print("fuel: some fuel")
+
+class Car(Vehicle):
+    def fuel(self):
+        print("fuel: petrol")
+
+class ElectricCar(Car):
+    def fuel(self):
+        print("fuel: electricity")
+
+v = Vehicle()
+v.fuel()
+c = Car()
+c.fuel()
+ec = ElectricCar()
+ec.fuel()
+
+# Example 4
+
+class Person:
+    def role(self):
+        print("role: Person")
+
+class Student(Person):
+    def role(self):
+        print("role: Student")
+
+class Graduate(Student):
+    def role(self):
+        print("role: Graduate")
+
+p = Person()
+p.role()
+s = Student()
+s.role()
+g = Graduate()
+g.role()
+
+# 3. Hierarchical Inheritance/
+# Example 5
+
+class Teacher:
+    def subject(self):
+        print("subject: general")
+
+class MathTeacher(Teacher):
+    def subject(self):
+        print("subject: Maths")
+
+class ScienceTeacher(Teacher):
+    def subject(self):
+        print("subject: Science")
+
+t = Teacher()
+t.subject()
+m = MathTeacher()
+m.subject()
+s = ScienceTeacher()
+s.subject()
+
+# Example 6
+
+class Payment:
+    def pay(self):
+        print("payment: cash")
+
+class UPI(Payment):
+    def pay(self):
+        print("payment: UPI")
+
+class CreditCard(Payment):
+    def pay(self):
+        print("payment: Credit Card")
+
+p = Payment()
+p.pay()
+u = UPI()
+u.pay()
+cc = CreditCard()
+cc.pay()
+
+# 4. Multiple Inheritance
+# Example 7
+
+class Singer:
+    def perform(self):
+        print("perform: singing")
+
+class Dancer:
+    def perform(self):
+        print("perform: dancing")
+
+class Performer(Singer, Dancer):
+    def perform(self):
+        print("perform: singing and dancing")
+
+s = Singer()
+s.perform()
+d = Dancer()
+d.perform()
+p = Performer()
+p.perform()
+
+# Example 8
+
+class Cricketer:
+    def play(self):
+        print("play: cricket")
+
+class Footballer:
+    def play(self):
+        print("play: football")
+
+class Sportsman(Cricketer, Footballer):
+    def play(self):
+        print("play: cricket and football")
+
+c = Cricketer()
+c.play()
+f = Footballer()
+f.play()
+s = Sportsman()
+s.play()
+
+# 5. Hybrid Inheritance
+# Example 9
+class Person:
+    def work(self):
+        print("work: Working")
+
+class Teacher(Person):
+    def work(self):
+        print("work: Teaching")
+
+class Researcher(Person):
+    def work(self):
+        print("work: Researching")
+
+class Professor(Teacher, Researcher):
+    def work(self):
+        print("work: Teaching and Researching")
+
+p = Person()
+p.work()
+t = Teacher()
+t.work()
+r = Researcher()
+r.work()
+prof = Professor()
+prof.work()
+
+# Example 10
+class Device:
+    def info(self):
+        print("info: Generic device")
+
+class Laptop(Device):
+    def info(self):
+        print("info: Laptop with keyboard")
+
+class Tablet(Device):
+    def info(self):
+        print("info: Tablet with touchscreen")
+
+class Hybrid2in1(Laptop, Tablet):
+    def info(self):
+        print("info: Laptop and Tablet in one")
+
+d = Device()
+d.info()
+l = Laptop()
+l.info()
+t = Tablet()
+t.info()
+h = Hybrid2in1()
+h.info()
